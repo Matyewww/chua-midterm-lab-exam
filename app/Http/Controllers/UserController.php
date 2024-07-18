@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Route;
+use App\Models\user;
 use Illuminate\Http\Request;
 
-class post extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,6 +13,8 @@ class post extends Controller
     public function index()
     {
         return user::all();
+        //return Author::where('fname', 'lname',)->get();
+        //return Author::
     }
 
     /**
@@ -33,7 +36,7 @@ class post extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(user $user)
     {
         //
     }
@@ -41,7 +44,7 @@ class post extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(user $user)
     {
         //
     }
@@ -49,7 +52,7 @@ class post extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, user $user)
     {
         //
     }
@@ -57,7 +60,7 @@ class post extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(user $user)
     {
         //
     }

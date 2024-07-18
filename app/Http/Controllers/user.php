@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+//use App\Models\user;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
 class user extends Controller
@@ -11,7 +12,8 @@ class user extends Controller
      */
     public function index()
     {
-        //
+        return user::all();
+       //return author::where('fname', 'lname', )->get();
     }
 
     /**
